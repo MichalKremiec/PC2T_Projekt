@@ -29,8 +29,9 @@ abstract class Student implements Serializable {
     public abstract void spustitDovednost();
 
     public String getInfo() {
-        return String.format("ID: %d, Jméno: %s %s, Rok narození: %d, Průměr: %.2f",
-                id, jmeno, prijmeni, rokNarozeni, getPrumer());
+        String znamkyStr = znamky.toString();
+        return String.format("ID: %d, Jméno: %s %s, Rok narození: %d, Průměr: %.2f, Známky: %s",
+                id, jmeno, prijmeni, rokNarozeni, getPrumer(), znamkyStr);
     }
 
     public String getPrijmeni() {
